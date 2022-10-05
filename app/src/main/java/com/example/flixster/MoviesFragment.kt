@@ -40,7 +40,7 @@ class MoviesFragment: Fragment() {
         val client = AsyncHttpClient()
         val params = RequestParams()
         params["api_key"] = API_KEY
-        val url = "https://api.themoviedb.org/3/movie/now_playing"
+        val url = "https://api.themoviedb.org/3/movie/top_rated"
 
         // Using the client, perform the HTTP request
         client[url, params, object : JsonHttpResponseHandler(){
