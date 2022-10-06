@@ -1,14 +1,30 @@
 package com.example.flixster
 
-import com.google.gson.annotations.SerializedName
+import android.support.annotation.Keep
+import kotlinx.serialization.SerialName
+import kotlinx.serialization.Serializable
 
-class Movies {
-    @SerializedName("poster_path")
-    var movieImageUrl: String? = null;
+@Keep
+@Serializable
+data class MoviesResponse(
+    @SerialName("results")
+    val response: List<Movies>
+)
 
-    @SerializedName("title")
-    var title: String? = null
+@Keep
+@Serializable
+data class Movies(
+    @SerialName("poster_path")
+    val movieImageUrl: String?,
+    @SerialName("title")
+    val title: String?,
+    @SerialName("overview")
+    val description: String?,
+    @SerialName("release_date")
+    val releaseDate: String?,
+    @SerialName("popularity")
+    val popularity: String?,
+    @SerialName("vote_count")
+    val voteCount: String?
+) : java.io.Serializable
 
-    @SerializedName("overview")
-    var description: String? = null
-}

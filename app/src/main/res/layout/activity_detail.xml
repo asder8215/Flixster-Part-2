@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFADD8E6">
+
+    /<!-- app:layout_constraintBottom_toTopOf="@+id/voteCount"
+app:layout_constraintTop_toBottomOf="@+id/movieImage"-->
+
+    <!-- app:layout_constraintBottom_toTopOf="@+id/releaseDate"
+ app:layout_constraintTop_toBottomOf="@+id/popularity" -->
+
+    <!-- app:layout_constraintBottom_toTopOf="@+id/description"
+     app:layout_constraintTop_toTopOf="@+id/voteCount" -->
+
+    <ImageView
+        android:id="@+id/movieImage"
+        android:layout_width="wrap_content"
+        android:layout_height="130dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        app:layout_constraintBottom_toTopOf="@id/popularity"
+        app:srcCompat="@android:drawable/ic_menu_crop" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/satisfy"
+        android:textSize="35sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/movieImage"
+        tools:text="Title" />
+
+    <TextView
+        android:id="@+id/popularity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/raleway"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/movieImage"
+        app:layout_constraintBottom_toTopOf="@id/voteCount"
+        tools:text="Popularity" />
+
+    <TextView
+        android:id="@+id/voteCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/raleway"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@id/releaseDate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/popularity"
+        tools:text="Vote Count" />
+
+    <TextView
+        android:id="@+id/releaseDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/raleway"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/voteCount"
+        app:layout_constraintBottom_toTopOf="@id/description"
+        tools:text="Release Date" />
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="384dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="202dp"
+        android:fontFamily="@font/raleway"
+        android:text="Description"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.481"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/releaseDate"
+        app:layout_constraintVertical_bias="0.666" />
+</androidx.constraintlayout.widget.ConstraintLayout>
